@@ -1,11 +1,17 @@
 from pathlib import Path
 
-from .utils.whisper.audio_transcribe import a2t as whisper_a2t
+from .utils import audio_to_text
 
-AUDIO_FILE = (
-    Path(__file__).parent.parent / "tests" / "audio_samples" / "en_news.wav"
-).as_posix()
+AUDIO_FILES = ["en_123.wav", "en_chunk.wav", "en_news.wav"]
+AUDIO_FILE_PATHS = {
+    file_name: (
+        Path(__file__).parent.parent / "tests" / "audio_samples" / file_name
+    ).as_posix()
+    for file_name in AUDIO_FILES
+}
 
 if __name__ == "__main__":
-    print("Whisper:\n", whisper_a2t(AUDIO_FILE))
-    print()
+    for file_name in AUDIO_FILE_PATHS:
+        print("###", file_name)
+        print(audio_to_text(AUDIO_FILE_PATHS[file_name]))
+        print()

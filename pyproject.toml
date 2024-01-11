@@ -14,8 +14,10 @@ license = "None"
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = ">=3.11,<3.12"
+python = ">=3.11"
 openai-whisper = { git = "https://github.com/openai/whisper.git" }
+speechrecognition = "^3.10.1"
+soundfile = "^0.12.1"
 
 [tool.poetry.group.dev.dependencies]
 black = "^23.12.1"
