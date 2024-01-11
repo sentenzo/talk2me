@@ -1,17 +1,15 @@
-from pathlib import Path
-
-from .utils import audio_to_text
-
-AUDIO_FILES = ["en_123.wav", "en_chunk.wav", "en_news.wav"]
-AUDIO_FILE_PATHS = {
-    file_name: (
-        Path(__file__).parent.parent / "tests" / "audio_samples" / file_name
-    ).as_posix()
-    for file_name in AUDIO_FILES
-}
+from .utils import (
+    audio_to_text,
+    mic_to_text,
+    mic_to_text_background,
+    print_mic_list,
+)
 
 if __name__ == "__main__":
-    for file_name in AUDIO_FILE_PATHS:
-        print("###", file_name)
-        print(audio_to_text(AUDIO_FILE_PATHS[file_name]))
-        print()
+    # print_mic_list()
+
+    # stop = mic_to_text_background(5)  # , mic_index=1)
+    # time.sleep(10)
+    # stop()
+
+    print(mic_to_text(5))
