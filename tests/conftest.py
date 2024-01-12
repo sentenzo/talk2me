@@ -16,6 +16,14 @@ AUDIO_FILES = {
         "path": (_path_to_audio / "en_news.wav").as_posix(),
         "transcription": " Wanted, Chief Justice of the Massachusetts Supreme Court, in April the SJC's current leader Edward Hennessy reaches the mandatory retirement age of 70 and a successor is ex...",
     },
+    "en_hedgehog.wav": {
+        "path": (_path_to_audio / "en_hedgehog.wav").as_posix(),
+        "transcription": " 1, 2, 3, 4. Cat, dog, hedgehog. I always go to bed when my eyes are red. What is the color of night? Something must break now.",
+    },
+    "en_crows.wav": {
+        "path": (_path_to_audio / "en_crows.wav").as_posix(),
+        "transcription": " Let me tell you about New Caledonian Crows. Now I'm not talking about the Old Caledonian Crows. Those ones were idiots. No, the New Caledonian Crows live on a group of items called New Caledonia. Must be named after the crows.",
+    },
 }
 
 

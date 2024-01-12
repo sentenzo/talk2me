@@ -16,4 +16,6 @@ def test_audio_to_text(audio_file_name):
     t_expected = AUDIO_FILES[audio_file_name]["transcription"]
     t_received = audio_to_text(path_to_audio)
     seq_sim = seq_similarity(t_expected, t_received)
+    print("t_received:", t_received)
+    print("seq_sim:", seq_sim)
     assert seq_sim >= SEQ_SIM_THRESHOLD
